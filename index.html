@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Portfolio - Ramjay Z Emperado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: lightblue;
+            font-weight: bold;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        nav a.active {
+            background-color: gray;
+            border-radius: 15px;
+            padding: 0.3rem 0.8rem;
+        }
+        
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;       
+       
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+    
+        h1, h2, h3 {
+            margin: 0.5rem 0;        
+        }
+        .skills {
+            display: flex;
+            justify-content: space-between;
+        }
+        .profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;    
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <a href="#home" class="active" onclick="navigate('home')">Home</a>
+            <a href="#about me" onclick="navigate('about me')">About Me</a>
+            <a href="#contact" onclick="navigate('contact')">Contact Info</a>
+        </nav>
+    </header>
+
+    <section id="home" class="container">
+        <div class="content">
+            <div>
+                <h1>Ramjay Z Emperado</h1>
+                <h3>Bachelor of Science in Information Technology</h3>
+                <p>San Pablo City, Laguna, Philippines</p>
+            </div>
+            <img src="https://assets.onecompiler.app/43eeynb8d/43eeymcmy/Messenger_creation_E614D65B-3CAD-4272-8CD0-3929396E8247.jpeg" alt="Profile Photo" class="profile-image"></img>
+        </div>
+    </section>
+
+    <section id="about me" class="container" style="display:none;">
+        <h2>Overview</h2>
+        <p>
+            As a graduate with a Bachelor of Science in Information Technology (BSIT), I possess a strong foundation in
+            computer systems, software development, networking, and IT infrastructure. Throughout my academic journey,
+            I have gained hands-on experience in programming, systems administration, database management, and web
+            development. My education has equipped me with the technical skills and problem-solving abilities to design,
+            implement, and maintain technology solutions that drive innovation and efficiency in various industries.
+        </p>
+        <div class="skills">
+            <div>
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Programming: Python, JavaScript, HTML, CSS</li>
+                    <li>Software Proficiency: Figma, Canva</li>
+                    <li>Tools: Microsoft Word, WPS, Google Docs</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Communication Leadership</li>
+                    <li>Problem-solving</li>
+                    <li>Creativity</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="display:none;">
+        <div class="content">
+            <div>
+                <h2>Ramjay Z Emperado</h2>
+                <p>Email: emperadoramjayz@gmail.com</p>
+                <p>Phone number: 09658629722</p>
+                <p>Facebook: <a href="https://www.facebook.com/share/1FbXufts3J/" target="_blank">https://www.facebook.com/share/1FbXufts3J/</a></p>
+            </div>
+            <img src="https://assets.onecompiler.app/43eeynb8d/43eeymcmy/Messenger_creation_E614D65B-3CAD-4272-8CD0-3929396E8247.jpeg" alt="Ramjay Z Emperado" class="profile-image">
+    </section>
+
+    <script>
+        function navigate(sectionId) {
+            document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+            document.getElementById(sectionId).style.display = "block";
+            document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
+            document.querySelector(`nav a[href='#${sectionId}']`).classList.add("active");
+        }
+    </script>
+</body>
+</html>
